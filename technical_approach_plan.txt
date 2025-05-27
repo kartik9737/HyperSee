@@ -1,0 +1,38 @@
+Technical Approach Plan for Hyperspectral Image Processing Project
+
+
+- Backend:
+  - Flask app with endpoints for file upload (/upload), prediction (/predict), and metrics (/metrics).
+  - AETransformer model loaded from saved state for inference.
+  - File upload endpoint saves HSI and Ground Truth files, runs a processing pipeline.
+  - Training script preprocesses data, trains AETransformer model, and saves it.
+- Frontend:
+  - React app with FileUpload component to upload HSI and GT files to backend.
+  - ModelResults component displays accuracy, classification report, and confusion matrix.
+  - Frontend interacts with backend via REST API calls.
+- Data Flow:
+  - User uploads files via frontend.
+  - Backend saves files, runs pipeline, performs inference.
+  - Results sent back to frontend and displayed.
+
+Plan:
+1. Backend Architecture
+   - Describe Flask app structure and endpoints.
+   - Explain AETransformer model loading and usage.
+   - Detail file upload handling and pipeline execution.
+   - Mention metrics evaluation endpoint.
+
+2. Model Training Pipeline
+   - Explain dataset preprocessing and reshaping.
+   - Describe AETransformer model architecture (input_dim, latent_dim).
+   - Outline training process and saving model.
+
+3. Frontend Architecture
+   - Describe React components: FileUpload and ModelResults.
+   - Explain file input handling and API calls.
+   - Detail result display with tables for classification report and confusion matrix.
+
+4. Data Flow and Interaction
+   - Illustrate flow from user file upload to backend processing.
+   - Show how results are returned and rendered in frontend.
+
