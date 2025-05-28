@@ -1,0 +1,8 @@
+# Ignore backend virtual environment
+backend/venv/
+
+# Ignore other common files
+*.pyc
+__pycache__/
+.env
+.DS_Store
