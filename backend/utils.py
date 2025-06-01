@@ -117,8 +117,9 @@ class EarlyStopping:
             self.best_loss = val_loss
             self.counter = 0
 
-def run_pipeline_with_files(hsi_path, gt_path, dataset_name, patch_size=16, latent_dim=32, num_epochs=10):
-    output_dir = os.path.join(os.path.dirname(hsi_path))
+def run_pipeline_with_files(hsi_path, gt_path, dataset_name, patch_size=16, latent_dim=32, num_epochs=10, output_dir=None):
+    if output_dir is None:
+        output_dir = os.path.join(os.path.dirname(hsi_path))
     os.makedirs(output_dir, exist_ok=True)
     torch.cuda.empty_cache()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -241,6 +242,10 @@ def run_pipeline_with_files(hsi_path, gt_path, dataset_name, patch_size=16, late
     overlay_path = os.path.join(output_dir, f"{dataset_name}_anomaly_map_overlay.png")
     plt.savefig(overlay_path)
     plt.close()
+
+    # Save anomaly score map as image
+    anomaly_map_path = os.path.join(output_dir, f"{dataset_name}_anomaly_map.png")
+    plt.imsave(anomaly_map_path, anomaly_map_norm, cmap='inferno')
 
     print("Training SVM on PCA-reduced latent features...")
     pca_svm = PCA(n_components=min(latent_dim, 20))
