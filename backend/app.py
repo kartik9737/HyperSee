@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 import os
+os.system("pip install torch==2.1.0")
 import torch
 from model.ae_transformer import AETransformer
 from model.utils import preprocess_data
