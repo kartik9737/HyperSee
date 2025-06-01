@@ -1,0 +1,148 @@
+.model-results {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.model-results h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.model-results h3 {
+  color: #444;
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+.model-results h4 {
+  color: #555;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.results-stats {
+  margin-bottom: 30px;
+}
+
+.stats-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.stats-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stats-section th,
+.stats-section td {
+  padding: 8px 12px;
+  text-align: left;
+  border: 1px solid #dee2e6;
+}
+
+.stats-section th {
+  background-color: #f1f3f5;
+  font-weight: 600;
+  color: #495057;
+}
+
+.stats-section tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.stats-section tr:hover {
+  background-color: #e9ecef;
+}
+
+.results-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.results-info p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Dark mode styles */
+.dark-mode .model-results {
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .model-results h2 {
+  color: #ffffff;
+}
+
+.dark-mode .model-results h3 {
+  color: #e0e0e0;
+}
+
+.dark-mode .model-results h4 {
+  color: #cccccc;
+}
+
+.dark-mode .stats-section {
+  background-color: #3d3d3d;
+}
+
+.dark-mode .stats-section table {
+  background-color: #2d2d2d;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .stats-section th {
+  background-color: #3d3d3d;
+  color: #e0e0e0;
+}
+
+.dark-mode .stats-section td {
+  border-color: #4d4d4d;
+  color: #e0e0e0;
+}
+
+.dark-mode .stats-section tr:nth-child(even) {
+  background-color: #353535;
+}
+
+.dark-mode .stats-section tr:hover {
+  background-color: #404040;
+}
+
+.dark-mode .results-info {
+  background-color: #3d3d3d;
+}
+
+.dark-mode .results-info p {
+  color: #cccccc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .model-results {
+    padding: 15px;
+  }
+
+  .stats-section {
+    padding: 10px;
+  }
+
+  .stats-section th,
+  .stats-section td {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+} 

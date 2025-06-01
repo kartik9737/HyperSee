@@ -1,0 +1,229 @@
+.image-display-container {
+  margin: 20px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-display-container h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.image-info {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.image-name {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.download-btn {
+  padding: 6px 12px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
+
+/* Modal Styles */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.modal-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-controls button {
+  padding: 4px 12px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.modal-controls button:hover {
+  background: #e9ecef;
+}
+
+.modal-controls .close-btn {
+  padding: 4px 12px;
+  background: #dc3545;
+  color: white;
+  border: none;
+}
+
+.modal-controls .close-btn:hover {
+  background: #c82333;
+}
+
+.modal-body {
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.modal-footer {
+  padding: 16px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+/* Dark Mode Styles */
+.dark .image-display-container {
+  background: #1a1a1a;
+}
+
+.dark .image-display-container h3 {
+  color: #ffffff;
+}
+
+.dark .image-item {
+  background: #2d2d2d;
+}
+
+.dark .image-info {
+  background: #333;
+}
+
+.dark .image-name {
+  color: #ffffff;
+}
+
+.dark .modal-content {
+  background: #1a1a1a;
+}
+
+.dark .modal-header {
+  border-bottom-color: #333;
+}
+
+.dark .modal-header h3 {
+  color: #ffffff;
+}
+
+.dark .modal-controls button {
+  background: #333;
+  border-color: #444;
+  color: #ffffff;
+}
+
+.dark .modal-controls button:hover {
+  background: #444;
+}
+
+.dark .modal-footer {
+  border-top-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .modal-controls {
+    gap: 8px;
+  }
+
+  .modal-controls button {
+    padding: 4px 8px;
+  }
+} 
